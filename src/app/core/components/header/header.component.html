@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" [ngClass]="'text-danger fw-semibold text-capitalize'" routerLink="/">{{navTitle}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li *ngFor="let item of navItems" class="nav-item">
+          <a class="nav-link" [routerLink]="item.link">{{ item.name }}</a>
+        </li>
+      </ul>
+      <hr>
+      <div class="d-flex align-items-center gap-2">
+        <ng-container *ngFor="let item of rightNavItems">
+          <a *ngIf="!item.class" class="nav-link" [routerLink]="item.link">{{ item.name }}</a>
+          <a *ngIf="item.class" [routerLink]="item.link" [ngClass]="item.class">{{ item.name }}</a>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</nav>

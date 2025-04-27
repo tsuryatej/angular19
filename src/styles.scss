@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+.submit-btn {
+  background-color: #0d6efd;   // Bootstrap primary blue
+  color: #fff;
+  font-size: 1rem;              // 1 rem (default ~16px)
+  padding: 0.625rem 1.25rem;    // 10px 20px (in rem)
+  border-radius: 0.5rem;        // 8px rounded corners
+  border: none;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0b5ed7;  // Slightly darker on hover
+    // transform: scale(1.02);     // Little pop on hover
+  }
+
+  &:active {
+    background-color: #0a58ca;
+    // transform: scale(0.98);     // Little shrink on click
+  }
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.25rem; /* 4px */
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-orange {
+  background-color: #FE7743;
+  color: #fff;
+
+  &:hover {
+    background-color: #e15e2c;
+  }
+}
+
+.btn-lighttone {
+  background-color: #EFEEEA;
+  color: #333;
+
+  &:hover {
+    background-color: #e0dfdb;
+  }
+}
+
+.btn-darktone {
+  background-color: #273F4F;
+  color: #fff;
+
+  &:hover {
+    background-color: #1c2e3b;
+  }
+}
+

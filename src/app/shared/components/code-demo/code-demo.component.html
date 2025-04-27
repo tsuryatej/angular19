@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angular Project Folder Structure</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #f8f9fa;
+      padding: 2rem;
+      color: #333;
+    }
+
+    pre {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      overflow-x: auto;
+      font-size: 0.95rem;
+      border-radius: 0.5rem;
+      line-height: 1.6;
+      box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+    }
+
+    code {
+      display: block;
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Angular Live Project Folder Structure</h1>
+
+  <pre><code>/project-root
+│
+├── e2e/                  # End-to-end test cases (Protractor / Cypress)
+├── src/
+│   ├── app/              # All app code lives here
+│   │   ├── core/         # Singleton services, guards, interceptors (loaded once)
+│   │   │   ├── services/
+│   │   │   ├── interceptors/
+│   │   │   ├── guards/
+│   │   │   └── core.module.ts
+│   │   │
+│   │   ├── shared/       # Reusable shared components, pipes, directives
+│   │   │   ├── components/
+│   │   │   ├── pipes/
+│   │   │   ├── directives/
+│   │   │   └── shared.module.ts
+│   │   │
+│   │   ├── features/     # Major modules/feature sections
+│   │   │   ├── feature1/
+│   │   │   │   ├── components/
+│   │   │   │   ├── services/
+│   │   │   │   ├── models/
+│   │   │   │   ├── feature1-routing.module.ts
+│   │   │   │   └── feature1.module.ts
+│   │   │   │
+│   │   │   └── feature2/
+│   │   │       └── ...
+│   │   │
+│   │   ├── layouts/      # Application layouts like Header, Footer, Sidebar
+│   │   │   ├── components/
+│   │   │   ├── layout.module.ts
+│   │   │   └── layout-routing.module.ts
+│   │   │
+│   │   ├── auth/         # Login, Register, Forgot Password, Auth Guard
+│   │   │   ├── components/
+│   │   │   ├── services/
+│   │   │   └── auth.module.ts
+│   │   │
+│   │   ├── environment/  # Environment-specific variables (dev, prod)
+│   │   │   ├── environment.ts
+│   │   │   └── environment.prod.ts
+│   │   │
+│   │   ├── app-routing.module.ts # Main routing
+│   │   ├── app.component.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   └── app.module.ts
+│   │
+│   ├── assets/           # Images, icons, stylesheets, JSON files
+│   │   ├── images/
+│   │   ├── icons/
+│   │   └── styles/
+│   │       ├── _variables.scss
+│   │       ├── _mixins.scss
+│   │       └── main.scss
+│   │
+│   ├── environments/     # Auto-managed by Angular CLI
+│   ├── favicon.ico
+│   ├── index.html
+│   └── styles.scss       # Global styles
+│
+├── angular.json          # Angular CLI configuration
+├── package.json          # NPM dependencies
+├── tsconfig.json         # TypeScript configuration
+├── README.md             # Project documentation
+└── .gitignore            # Files to ignore in Git
+</code></pre>
+
+</body>
+</html>
