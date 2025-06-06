@@ -3,18 +3,52 @@
   <table class="table table-bordered table-striped">
     <thead class="table-dark">
       <tr>
-        <th>ID</th>
-        <th>Name</th>
+        <th>Employee ID</th>
+        <th>Employee Code</th>
+        <th>Verification Doc Number</th>
+        <th>Verification Doc Name</th>
+        <th>Profile Overview</th>
+        <th>Full Name</th>
+        <th>Is Fresher</th>
+        <th>Marital Status</th>
+        <th>Spouse Name</th>
         <th>Email</th>
-        <th>Phone</th>
+        <th>Mobile</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Joining Date</th>
+        <th>Department ID</th>
+        <th>Designation ID</th>
+        <th>State</th>
+        <th>City</th>
+        <th>Profile Photo Url</th>
+        <th>Status</th>
+        <th>Created At</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let emp of employees">
-        <td>{{ emp.id }}</td>
-        <td>{{ emp.name }}</td>
+        <td>{{ emp.employeeId }}</td>
+        <td>{{ emp.employeeCode }}</td>
+        <td>{{ emp.verificationDocNumber }}</td>
+        <td>{{ emp.verificationDocName }}</td>
+        <td>{{ emp.profileOverview }}</td>
+        <td>{{ emp.fullName }}</td>
+        <td>{{ emp.isFresher }}</td>
+        <td>{{ emp.maritalStatus }}</td>
+        <td>{{ emp.spouseName }}</td>
         <td>{{ emp.email }}</td>
-        <td>{{ emp.phone }}</td>
+        <td>{{ emp.mobile }}</td>
+        <td>{{ emp.gender }}</td>
+        <td>{{ emp.dob }}</td>
+        <td>{{ emp.joiningDate }}</td>
+        <td>{{ emp.departmentId }}</td>
+        <td>{{ emp.designationId }}</td>
+        <td>{{ emp.stateName }}</td>
+        <td>{{ emp.cityName }}</td>
+        <td>{{ emp.profilePhotoUrl }}</td>
+        <td>{{ emp.status }}</td>
+        <td>{{ emp.createdAt }}</td>
       </tr>
     </tbody>
   </table>
