@@ -7,6 +7,7 @@ import { AboutComponent } from './shared/components/about/about.component';
 import { RegisterComponent } from './shared/components/register/register.component';
 import { LoginComponent } from './shared/components/login/login.component';
 import { HomeComponent } from './shared/components/home/home.component';
+import { EmployeesComponent } from './shared/components/employees/employees.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'header', component: HeaderComponent },
+  { path: 'employees', component: EmployeesComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path: 'code-demo', component:CodeDemoComponent},
 ];

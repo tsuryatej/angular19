@@ -3,6 +3,7 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './core/components/header/header.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { LoginComponent } from './shared/components/login/login.component';
@@ -13,6 +14,7 @@ import { CodeDemoComponent } from './shared/components/code-demo/code-demo.compo
 import { AboutComponent } from './shared/components/about/about.component';
 import { ContactComponent } from './shared/components/contact/contact.component';
 import { HomeComponent } from './shared/components/home/home.component';
+import { EmployeesComponent } from './shared/components/employees/employees.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { HomeComponent } from './shared/components/home/home.component';
     CodeDemoComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    EmployeesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
