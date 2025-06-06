@@ -11,7 +11,8 @@ export class HeaderComponent {
   navItems = [
     { name: 'Home', link: '/home' },
     { name: 'About', link: '/about' },
-    { name: 'Contact', link: '/contact' }
+    { name: 'Contact', link: '/contact' },
+    { name: 'Employees', link: '/employees' }
   ];
   rightNavItems = [
     { name: 'Login', link: '/login' },
