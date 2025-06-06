@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 export interface Employee {
   employeeId: number;
@@ -29,31 +30,11 @@ export interface Employee {
   providedIn: 'root'
 })
 export class EmployeeService {
-  getEmployees(): Observable<Employee[]> {
-    const employee: Employee = {
-      employeeId: 77,
-      employeeCode: 'EMP9515',
-      verificationDocNumber: 'DSF3242DSf',
-      verificationDocName: 'Pan Card',
-      profileOverview: 'test Lorem ipsum',
-      fullName: 'Serikath bebo',
-      isFresher: false,
-      maritalStatus: '2',
-      spouseName: '0',
-      email: 'Serikanth@gmail.com',
-      mobile: '65894775',
-      gender: 'male',
-      dob: '1990-05-05T00:00:00',
-      joiningDate: '2023-05-05T00:00:00',
-      departmentId: 8,
-      designationId: 11,
-      stateName: 'Los Anglos',
-      cityName: 'Delviana',
-      profilePhotoUrl: '/assets/images/default-avatar.png',
-      status: 'active',
-      createdAt: '2025-05-06T08:18:26.04'
-    };
+  private readonly apiUrl = 'https://motopartz.gerasim.in/api/Employee/all';
 
-    return of([employee]);
+  constructor(private http: HttpClient) {}
+
+  getEmployees(): Observable<Employee[]> {
+    return this.http.get<Employee[]>(this.apiUrl);
   }
 }
